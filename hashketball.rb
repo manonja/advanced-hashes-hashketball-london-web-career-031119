@@ -34,7 +34,8 @@ score = ""
   game_hash.each do |location, data|
     data.each do |attribute, specs|
       if specs.include?(player)
-      score = game_hash[location][attribute][player][:points]
+        binding.pry
+      score = specs[:points]
       end
     end
   end
@@ -137,6 +138,8 @@ def big_shoe_rebounds
 end
 
 big_shoe_rebounds
+
+num_points_scored("Alan Anderson")
 
 
 
